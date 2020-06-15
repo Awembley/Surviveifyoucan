@@ -14,7 +14,7 @@ public class Market extends MouseAdapter{
 	private static long time;
 	
 	Kontrol kontrol;
-	GöstergeEkran gösterge;
+	GÃ¶stergeEkran gÃ¶sterge;
 	
 	private int Y1 = 500;
 	private int Y2 = 500;
@@ -24,11 +24,11 @@ public class Market extends MouseAdapter{
 	private int Y6 = 500;
 	
 	int geciciboyut = 2;
-	float gecicihýz = 1.5f;
+	float gecicihÃ½z = 1.5f;
 	
-	public Market(Kontrol kontrol,GöstergeEkran gösterge) {
+	public Market(Kontrol kontrol,GÃ¶stergeEkran gÃ¶sterge) {
 		this.kontrol = kontrol;
-		this.gösterge = gösterge;
+		this.gÃ¶sterge = gÃ¶sterge;
 	}
 	
 	public void render(Graphics g) {
@@ -38,111 +38,111 @@ public class Market extends MouseAdapter{
 		g.drawString("Market", Oyun.GENISLIK / 2 -100, 50);
 		
 		
-		//CAN YETENEÐÝ
+		//CAN YETENEÃÃ
 		g.setFont(new Font("arial",0,12));          
-		g.drawString("Caný Yükselt", 110, 130);
+		g.drawString("CanÃ½ YÃ¼kselt", 110, 130);
 		g.drawString("Fiyat:" + Y1 , 110, 150);
 		g.drawRect(100, 100, 100, 80);
 		
 
-		//CANI YENÝLE
+		//CANI YENÃLE
 		g.setFont(new Font("arial",0,12));          
-		g.drawString("Caný Yenile", 340, 130);
+		g.drawString("CanÃ½ Yenile", 340, 130);
 		g.drawString("Fiyat:" + Y2 , 340, 150);
 		g.drawRect(330, 100, 100, 80);
 		
 
 		//HIZI ARTTIR
 		g.setFont(new Font("arial",0,12));          
-		g.drawString("Hýzý arttýr", 515, 130);
+		g.drawString("HÃ½zÃ½ arttÃ½r", 515, 130);
 		g.drawString("Fiyat: " + Y3 , 515, 150);
 		g.drawRect(500, 100, 100, 80);
 		
 
-		//DÜÞMANLARI SÝL
+		//DÃœÃžMANLARI SÃL
 		g.setFont(new Font("arial",0,12));          
-		g.drawString("Düþmanlarý Sil", 110, 230);
+		g.drawString("DÃ¼Ã¾manlarÃ½ Sil", 110, 230);
 		g.drawString("Fiyat:" + Y4 , 110, 250);
 		g.drawString("!Boss", 110, 270);
 		g.drawRect(100, 200, 100, 80);
 		
-		//Kendini Küçült
+		//Kendini KÃ¼Ã§Ã¼lt
 		g.setFont(new Font("arial",0,12));          
-		g.drawString("Kendini Küçült", 340, 230);
+		g.drawString("Kendini KÃ¼Ã§Ã¼lt", 340, 230);
 		g.drawString("Fiyat:" + Y5 , 340, 250);
 		g.drawString("Max 6 kere", 340, 270);
 		g.drawRect(330, 200, 100, 80);
 		
-		//Özel Karýþým
+		//Ã–zel KarÃ½Ã¾Ã½m
 		g.setFont(new Font("arial",0,12));          
-		g.drawString("Özel Karýþým", 515, 230);
+		g.drawString("Ã–zel KarÃ½Ã¾Ã½m", 515, 230);
 		g.drawString("Fiyat:" + Y6 , 515, 250);
 		g.drawRect(500, 200, 100, 80);
 		
 		
-		g.drawString("Skor: " + gösterge.getSkor() , Oyun.GENISLIK / 2 - 60, 330);
-		g.drawString("Oyuna Dönmek Ýçin 'M' ye basýn." , Oyun.GENISLIK / 2 -110, 360);
+		g.drawString("Skor: " + gÃ¶sterge.getSkor() , Oyun.GENISLIK / 2 - 60, 330);
+		g.drawString("Oyuna DÃ¶nmek ÃÃ§in 'M' ye basÃ½n." , Oyun.GENISLIK / 2 -110, 360);
 	}
 	
 	
-	public void mousePressed(MouseEvent e) {   //Marketin özelliklerini ayarlama.
+	public void mousePressed(MouseEvent e) {   //Marketin Ã¶zelliklerini ayarlama.
 		
 		int mx = e.getX();
 		int my = e.getY();
 		
-		if(mx >= 100 && mx <= 200) {  //Caný arttýr
+		if(mx >= 100 && mx <= 200) {  //CanÃ½ arttÃ½r
 			
 			if (my >= 100 && my <= 180) {
-				if(gösterge.getSkor() >= Y1) {
-					gösterge.setSkor(gösterge.getSkor() - Y1);
+				if(gÃ¶sterge.getSkor() >= Y1) {
+					gÃ¶sterge.setSkor(gÃ¶sterge.getSkor() - Y1);
 					Y1 += 500;
-					gösterge.sýnýr += 20;
-					gösterge.SAGLIK = (100 + (gösterge.sýnýr / 2));
+					gÃ¶sterge.sÃ½nÃ½r += 20;
+					gÃ¶sterge.SAGLIK = (100 + (gÃ¶sterge.sÃ½nÃ½r / 2));
 					
 				}
 			}
 		}
-		if(mx >= 330 && mx <= 430) { //Caný Yenile
+		if(mx >= 330 && mx <= 430) { //CanÃ½ Yenile
 			
 			if (my >= 100 && my <= 180) {
-				if(gösterge.getSkor() >= Y2) {
-					gösterge.setSkor(gösterge.getSkor() - Y2);
+				if(gÃ¶sterge.getSkor() >= Y2) {
+					gÃ¶sterge.setSkor(gÃ¶sterge.getSkor() - Y2);
 					Y2 += 500;
-					gösterge.SAGLIK = (100 + (gösterge.sýnýr / 2));
+					gÃ¶sterge.SAGLIK = (100 + (gÃ¶sterge.sÃ½nÃ½r / 2));
 						}
 			}
 		}
-		if(mx >= 500 && mx <= 600) {  // Hýzý arttýr
+		if(mx >= 500 && mx <= 600) {  // HÃ½zÃ½ arttÃ½r
 	
 			if (my >= 100 && my <= 180) {
-				if(gösterge.getSkor() >= Y3) {
-				gösterge.setSkor(gösterge.getSkor() - Y3);
-				Y3 += 10;	
-				kontrol.hýz+= 0.5;
+				if(gÃ¶sterge.getSkor() >= Y3) {
+				gÃ¶sterge.setSkor(gÃ¶sterge.getSkor() - Y3);
+				Y3 += 500;	
+				kontrol.hÃ½z+= 0.5;
 				}
 
 			}
 			}
-		if(mx >= 100 && mx <= 200) {  //Düþmanlarý Sil
+		if(mx >= 100 && mx <= 200) {  //DÃ¼Ã¾manlarÃ½ Sil
 				
 			if (my >= 200 && my <= 300) {
-				if(gösterge.getSkor() >= Y4) { 
-					if(gösterge.getLevel() != 6) {   //boss leveller 
-					gösterge.setSkor(gösterge.getSkor() - Y4);
+				if(gÃ¶sterge.getSkor() >= Y4) { 
+					if(gÃ¶sterge.getLevel() != 6) {   //boss leveller 
+					gÃ¶sterge.setSkor(gÃ¶sterge.getSkor() - Y4);
 					Y4 += 500;	
-					kontrol.DüþmanlarýSil();
+					kontrol.DÃ¼Ã¾manlarÃ½Sil();
 					}
 				}
 			}
 			
 		}
 
-		if(mx >= 330 && mx <= 430) {  //Kendini Küçült
+		if(mx >= 330 && mx <= 430) {  //Kendini KÃ¼Ã§Ã¼lt
 			
 			if (my >= 200 && my <= 300) {
-				if(gösterge.getSkor() >= Y5) { 
+				if(gÃ¶sterge.getSkor() >= Y5) { 
 				if(kontrol.boyut > 20) {
-					gösterge.setSkor(gösterge.getSkor() - Y5);
+					gÃ¶sterge.setSkor(gÃ¶sterge.getSkor() - Y5);
 					Y5 += 500;	
 					kontrol.boyut -= 2;
 					
@@ -150,15 +150,15 @@ public class Market extends MouseAdapter{
 				}
 			}
 		}
-			if(mx >= 500 && mx <= 600) {  //Özel Karýþým
+			if(mx >= 500 && mx <= 600) {  //Ã–zel KarÃ½Ã¾Ã½m
 				
 				if (my >= 200 && my <= 300) {
-					if(gösterge.getSkor() >= Y6) { 
-						if(kontrol.boyut > 20 || kontrol.hýz < 12.0f) {
-						gösterge.setSkor(gösterge.getSkor() - Y6);
+					if(gÃ¶sterge.getSkor() >= Y6) { 
+						if(kontrol.boyut > 20 || kontrol.hÃ½z < 12.0f) {
+						gÃ¶sterge.setSkor(gÃ¶sterge.getSkor() - Y6);
 						Y6 += 500;	
 						kontrol.boyut -= geciciboyut;
-						kontrol.hýz += gecicihýz;
+						kontrol.hÃ½z += gecicihÃ½z;
 						}
 					}
 					}
