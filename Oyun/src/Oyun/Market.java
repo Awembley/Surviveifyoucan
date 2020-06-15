@@ -21,7 +21,7 @@ public class Market extends MouseAdapter{
 	private int Y3 = 500;
 	private int Y4 = 500;
 	private int Y5 = 500;
-	private int Y6 = 500;
+	private int Y6 = 1000;
 	
 	int geciciboyut = 2;
 	float gecicihýz = 1.5f;
@@ -156,7 +156,7 @@ public class Market extends MouseAdapter{
 					if(gösterge.getSkor() >= Y6) { 
 						if(kontrol.boyut > 20 || kontrol.hýz < 12.0f) {
 						gösterge.setSkor(gösterge.getSkor() - Y6);
-						Y6 += 500;	
+						Y6 += 1000;	
 						kontrol.boyut -= geciciboyut;
 						kontrol.hýz += gecicihýz;
 						}
